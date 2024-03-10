@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  overflow-x: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.galleryBoxContainer{
+  padding: 25px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.galleryInternalBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.galleryContentBox{
+  display: flex;
+  flex-direction:column;
+  align-items: flex-start;
+  gap: 10px;
+  color: aliceblue;
+  font-family: 'Open Sans', sans-serif;
+}
+.galleryTitle{
+    padding:0 0 10px 0;
+    border-bottom: 2px solid white;
+    text-align: left;
+}
+.galleryContent{
+    text-align: left;
+}
+.galleryContentBox img {
+  max-width: 100%;
+  height: auto;
 }
